@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect width="1200" height="750" fill="#f9fafb"/>
+
+  <!-- Streamlit Top Bar -->
+  <rect x="0" y="0" width="1200" height="60" fill="#0f172a"/>
+  <!-- App Logo / Title -->
+  <rect x="25" y="16" width="28" height="28" rx="6" fill="#8b5cf6"/>
+  <text x="39" y="35" font-family="Inter, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">&#x2726;</text>
+  <text x="65" y="36" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">VeritasNLP &bull; Fake News Credibility Classifier</text>
+  <rect x="1040" y="16" width="135" height="28" rx="14" fill="#1e293b"/>
+  <circle cx="1055" cy="30" r="4" fill="#10b981"/>
+  <text x="1068" y="34" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#94a3b8">Model: TF-IDF v2.4</text>
+
+  <!-- Left Sidebar (Streamlit style) -->
+  <rect x="0" y="60" width="280" height="690" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="25" y="95" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#6b7280" letter-spacing="1">CONFIGURATION</text>
+  
+  <rect x="25" y="115" width="230" height="40" rx="8" fill="#f3f4f6"/>
+  <text x="40" y="140" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1f2937">Classifier: Passive-Aggressive</text>
+
+  <rect x="25" y="165" width="230" height="40" rx="8" fill="#f3f4f6"/>
+  <text x="40" y="190" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1f2937">Vectorizer: TF-IDF (10K terms)</text>
+
+  <text x="25" y="240" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#6b7280" letter-spacing="1">TEST METRICS</text>
+  <rect x="25" y="255" width="230" height="68" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="280" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#6b7280">Overall Accuracy</text>
+  <text x="40" y="308" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800" fill="#8b5cf6">94.8%</text>
+
+  <rect x="25" y="335" width="230" height="68" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="360" font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#6b7280">F1-Score (Harmonic Mean)</text>
+  <text x="40" y="388" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800" fill="#10b981">0.952</text>
+
+  <!-- Main Content Area -->
+  <g transform="translate(305, 80)">
+    <!-- Article Input Box -->
+    <rect x="0" y="0" width="865" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb" filter="url(#cardShadow)"/>
+    <text x="24" y="32" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#111827">Live Article Input &amp; Lexical Inspection</text>
+    <rect x="24" y="48" width="817" height="85" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+    <text x="38" y="75" font-family="Inter, sans-serif" font-size="12" fill="#374151">"BREAKING: Health ministry unveils nationwide smart diagnostics initiative with automated clinic integration..."</text>
+    <text x="38" y="100" font-family="'JetBrains Mono', monospace" font-size="11" fill="#9ca3af">Word count: 348 | Tokens: 412 | Preprocessed: Lowercased, Lemmatized, Stopwords Removed</text>
+
+    <!-- Run Classifier Button -->
+    <rect x="24" y="142" width="130" height="30" rx="6" fill="url(#purpleGrad)"/>
+    <text x="89" y="162" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">&#x25B6; Analyze Veracity</text>
+
+    <!-- Results Section -->
+    <g transform="translate(0, 200)">
+      <!-- Left Card: Prediction Verdict -->
+      <rect x="0" y="0" width="415" height="430" rx="12" fill="#ffffff" stroke="#e5e7eb" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="415" height="6" rx="3" fill="url(#emeraldGrad)"/>
+      <text x="24" y="36" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#111827">Classification Verdict</text>
+      
+      <rect x="24" y="55" width="367" height="90" rx="10" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text x="40" y="85" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#047857" letter-spacing="0.5">PREDICTED CLASS</text>
+      <text x="40" y="122" font-family="Inter, sans-serif" font-size="28" font-weight="900" fill="#065f46">REAL / AUTHENTIC</text>
+      <text x="340" y="120" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800" fill="#059669">98.2%</text>
+
+      <!-- Confidence Progress Bar -->
+      <text x="24" y="175" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#6b7280">Veracity Probability Distribution</text>
+      <rect x="24" y="190" width="367" height="12" rx="6" fill="#f3f4f6"/>
+      <rect x="24" y="190" width="360" height="12" rx="6" fill="#10b981"/>
+
+      <!-- Sentiment & Linguistic signals -->
+      <text x="24" y="235" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#374151">Linguistic Signals</text>
+      <rect x="24" y="250" width="367" height="36" rx="6" fill="#f9fafb" stroke="#e5e7eb"/>
+      <text x="36" y="273" font-family="Inter, sans-serif" font-size="11" fill="#4b5563">Clickbait Headline Index</text>
+      <text x="360" y="273" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#059669">Low (0.04)</text>
+
+      <rect x="24" y="295" width="367" height="36" rx="6" fill="#f9fafb" stroke="#e5e7eb"/>
+      <text x="36" y="318" font-family="Inter, sans-serif" font-size="11" fill="#4b5563">Subjectivity / Emotional Bias</text>
+      <text x="360" y="318" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#059669">Neutral (0.18)</text>
+
+      <rect x="24" y="340" width="367" height="36" rx="6" fill="#f9fafb" stroke="#e5e7eb"/>
+      <text x="36" y="363" font-family="Inter, sans-serif" font-size="11" fill="#4b5563">Punctuation &amp; Caps Abnormality</text>
+      <text x="360" y="363" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#059669">Normal (0.01)</text>
+
+      <!-- Right Card: TF-IDF Influential Words -->
+      <g transform="translate(435, 0)">
+        <rect x="0" y="0" width="430" height="430" rx="12" fill="#ffffff" stroke="#e5e7eb" filter="url(#cardShadow)"/>
+        <text x="24" y="36" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#111827">TF-IDF Key Predictive Feature Weights</text>
+
+        <!-- Feature Bars -->
+        <g transform="translate(24, 60)">
+          <!-- Item 1 -->
+          <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="11" fill="#111827">initiative</text>
+          <rect x="130" y="4" width="220" height="14" rx="4" fill="#ede9fe"/>
+          <rect x="130" y="4" width="195" height="14" rx="4" fill="#8b5cf6"/>
+          <text x="360" y="16" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#6d28d9">+0.88</text>
+
+          <!-- Item 2 -->
+          <text x="0" y="46" font-family="'JetBrains Mono', monospace" font-size="11" fill="#111827">nationwide</text>
+          <rect x="130" y="34" width="220" height="14" rx="4" fill="#ede9fe"/>
+          <rect x="130" y="4" width="160" height="14" rx="4" fill="#8b5cf6"/>
+          <text x="360" y="46" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#6d28d9">+0.72</text>
+
+          <!-- Item 3 -->
+          <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="11" fill="#111827">integration</text>
+          <rect x="130" y="64" width="220" height="14" rx="4" fill="#ede9fe"/>
+          <rect x="130" y="64" width="140" height="14" rx="4" fill="#8b5cf6"/>
+          <text x="360" y="76" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#6d28d9">+0.64</text>
+
+          <!-- Item 4 -->
+          <text x="0" y="106" font-family="'JetBrains Mono', monospace" font-size="11" fill="#111827">ministry</text>
+          <rect x="130" y="94" width="220" height="14" rx="4" fill="#ede9fe"/>
+          <rect x="130" y="94" width="125" height="14" rx="4" fill="#8b5cf6"/>
+          <text x="360" y="106" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#6d28d9">+0.57</text>
+
+          <!-- Item 5 -->
+          <text x="0" y="136" font-family="'JetBrains Mono', monospace" font-size="11" fill="#111827">diagnostics</text>
+          <rect x="130" y="124" width="220" height="14" rx="4" fill="#ede9fe"/>
+          <rect x="130" y="124" width="105" height="14" rx="4" fill="#8b5cf6"/>
+          <text x="360" y="136" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#6d28d9">+0.48</text>
+        </g>
+
+        <!-- Confusion matrix badge -->
+        <rect x="24" y="240" width="382" height="140" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="40" y="265" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#334155">Confusion Matrix (5,000 Validation Samples)</text>
+        <text x="40" y="295" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569">True Positives (Real): 2,410 &bull; True Negatives: 2,330</text>
+        <text x="40" y="320" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569">False Positives: 110 &bull; False Negatives: 150</text>
+        <text x="40" y="350" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#6d28d9">Model Evaluation: High Precision (95.6%)</text>
+      </g>
+    </g>
+  </g>
+</svg>

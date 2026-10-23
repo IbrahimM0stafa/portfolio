@@ -69,8 +69,8 @@ import { LightboxComponent } from '../lightbox/lightbox.component';
               'bg-transparent text-neutral-500 dark:text-neutral-400 hover:bg-white/50 dark:hover:bg-dark-surface hover:text-neutral-700 dark:hover:text-neutral-200': activeIndex() !== i
             }"
           >
-            <span class="w-3 h-3 rounded-sm flex-shrink-0 overflow-hidden">
-              <img src="/favicon.ico" class="w-full h-full object-contain" alt="" (error)="onFaviconError($event)" />
+            <span class="w-3.5 h-3.5 rounded-sm flex-shrink-0 overflow-hidden">
+              <img src="/favicon.svg" class="w-full h-full object-contain" alt="" (error)="onFaviconError($event)" />
             </span>
             <span class="truncate">{{ view.label }}</span>
           </button>

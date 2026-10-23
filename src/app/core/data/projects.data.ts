@@ -112,7 +112,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
       {
         id: 'tracking',
         label: 'Live Order Tracking',
-        imagePath: '/images/projects/petites/Tracking.webp',
+        imagePath: '/images/projects/petites/Orders.webp',
+        fallbackImagePath: '/images/projects/petites/Tracking.webp',
         altText: 'Petites live order tracking interface displaying active 8-stage progress state',
         caption: 'Customer tracking screen reflecting live order state transitions from PENDING through to COMPLETED via WebSockets.',
         deviceType: 'desktop',
@@ -124,6 +125,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
         id: 'loyalty',
         label: 'Loyalty & Reward Stamps',
         imagePath: '/images/projects/petites/Loyalty.webp',
+        fallbackImagePath: '/images/projects/petites/Loyalyty.webp',
         altText: 'Petites loyalty stamp tracker screen rewarding milestones after every 5 completed orders',
         caption: 'Customer loyalty program awarding dynamic reward treats upon crossing order threshold milestones.',
         deviceType: 'desktop',
@@ -132,15 +134,16 @@ export const PROJECTS_DATA: ProjectItem[] = [
         browserUrl: 'petites.com/loyalty'
       },
       {
-        id: 'admin',
-        label: 'Admin Kitchen Control Panel',
-        imagePath: '/images/projects/petites/Admin.webp',
-        altText: 'Petites operations dashboard showing kitchen capacity usage, time cutoffs, and order management',
-        caption: 'Operations dashboard hosted on admin.petites.com — controlling daily baking capacities, cutoff times, and order lifecycle.',
+        id: 'about',
+        label: 'Artisanal Bakery Story',
+        imagePath: '/images/projects/petites/About.webp',
+        fallbackImagePath: '/images/projects/petites/Admin.webp',
+        altText: 'Petites kitchen heritage and artisanal craft story',
+        caption: 'Artisanal bakery story, culinary heritage, and production background.',
         deviceType: 'desktop',
         isVerifiedAsset: true,
-        badge: 'Operations Admin',
-        browserUrl: 'admin.petites.com'
+        badge: 'Bakery Story',
+        browserUrl: 'petites.com/about'
       }
     ],
     githubUrl: 'https://github.com/IbrahimM0stafa',
@@ -363,7 +366,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       {
         id: 'streamlit-console',
         label: 'Analysis Console',
-        imagePath: '/images/projects/smart-city/dashboard-overview.svg',
+        imagePath: '/images/projects/fake-news-detector/nlp-dashboard.svg',
         altText: 'Fake News Detection interactive Streamlit analysis interface',
         caption: 'Interactive Streamlit console providing real-time credibility analysis and feature evaluation.',
         deviceType: 'desktop',
