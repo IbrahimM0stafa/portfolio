@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <filter id="cityShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="#f8fafc"/>
+
+  <!-- Top App Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#0f172a"/>
+  <!-- DXC Tag / Project branding -->
+  <rect x="30" y="18" width="60" height="28" rx="4" fill="#4f46e5"/>
+  <text x="60" y="37" font-family="Inter, sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">DXC</text>
+  <text x="105" y="38" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Smart City IoT Telemetry &amp; Monitoring Platform</text>
+  
+  <rect x="910" y="18" width="130" height="28" rx="14" fill="#1e293b"/>
+  <circle cx="925" cy="32" r="4" fill="#10b981"/>
+  <text x="938" y="36" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Sensors: 1,420 Online</text>
+
+  <rect x="1055" y="18" width="115" height="28" rx="4" fill="#334155"/>
+  <text x="1112" y="36" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#e2e8f0" text-anchor="middle">K8s Cluster: OK</text>
+
+  <!-- Sub navigation -->
+  <rect x="0" y="64" width="1200" height="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">LIVE OVERVIEW</text>
+  <line x1="40" y1="110" x2="140" y2="110" stroke="#4f46e5" stroke-width="3"/>
+  <text x="180" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">TRAFFIC FLOW DASHBOARD</text>
+  <text x="390" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">AIR POLLUTION &amp; PM2.5</text>
+  <text x="590" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">STREET LIGHTING GRIDS</text>
+  <text x="790" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">INCIDENT ALERTS (3 ACTIVE)</text>
+
+  <!-- Metric KPI Cards -->
+  <g transform="translate(30, 130)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="265" height="110" rx="10" fill="#ffffff" stroke="#e2e8f0" filter="url(#cityShadow)"/>
+    <text x="24" y="32" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#64748b">AIR QUALITY INDEX (CITY AVG)</text>
+    <text x="24" y="70" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#059669">42 AQI</text>
+    <text x="24" y="94" font-family="Inter, sans-serif" font-size="12" fill="#059669">&#x2714; Good (Low particulate matter)</text>
+
+    <!-- Card 2 -->
+    <rect x="290" y="0" width="265" height="110" rx="10" fill="#ffffff" stroke="#e2e8f0" filter="url(#cityShadow)"/>
+    <text x="314" y="32" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#64748b">TRAFFIC CONGESTION INDEX</text>
+    <text x="314" y="70" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#d97706">28.4%</text>
+    <text x="314" y="94" font-family="Inter, sans-serif" font-size="12" fill="#d97706">Moderate flow at coastal corridor</text>
+
+    <!-- Card 3 -->
+    <rect x="580" y="0" width="265" height="110" rx="10" fill="#ffffff" stroke="#e2e8f0" filter="url(#cityShadow)"/>
+    <text x="604" y="32" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#64748b">SMART GRID ENERGY SAVINGS</text>
+    <text x="604" y="70" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#2563eb">34.8%</text>
+    <text x="604" y="94" font-family="Inter, sans-serif" font-size="12" fill="#2563eb">Automated luminaire dimming</text>
+
+    <!-- Card 4 -->
+    <rect x="870" y="0" width="270" height="110" rx="10" fill="#ffffff" stroke="#e2e8f0" filter="url(#cityShadow)"/>
+    <text x="894" y="32" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#64748b">API LATENCY OPTIMIZATION</text>
+    <text x="894" y="70" font-family="Inter, sans-serif" font-size="32" font-weight="800" fill="#7c3aed">-30%</text>
+    <text x="894" y="94" font-family="Inter, sans-serif" font-size="12" fill="#7c3aed">Query indexing &amp; Spring caching</text>
+  </g>
+
+  <!-- Real-time telemetry chart & Incident log -->
+  <g transform="translate(30, 260)">
+    <!-- Main Telemetry View -->
+    <rect x="0" y="0" width="760" height="450" rx="12" fill="#ffffff" stroke="#e2e8f0" filter="url(#cityShadow)"/>
+    <text x="28" y="38" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0f172a">City Telemetry Ingestion Over Time (24h Stream)</text>
+    <text x="560" y="38" font-family="Inter, sans-serif" font-size="12" fill="#64748b">MQTT Broker &bull; Spring Boot 21</text>
+
+    <!-- Chart Grid lines -->
+    <line x1="50" y1="100" x2="710" y2="100" stroke="#f1f5f9" stroke-width="1.5"/>
+    <line x1="50" y1="170" x2="710" y2="170" stroke="#f1f5f9" stroke-width="1.5"/>
+    <line x1="50" y1="240" x2="710" y2="240" stroke="#f1f5f9" stroke-width="1.5"/>
+    <line x1="50" y1="310" x2="710" y2="310" stroke="#f1f5f9" stroke-width="1.5"/>
+    <line x1="50" y1="380" x2="710" y2="380" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <!-- Wave 1: Energy & Traffic -->
+    <path d="M 50 320 Q 150 280 230 190 T 400 160 T 550 220 T 710 130" fill="none" stroke="#4f46e5" stroke-width="3"/>
+    <!-- Wave 2: Air quality -->
+    <path d="M 50 260 Q 140 220 250 260 T 420 280 T 580 180 T 710 240" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+    <!-- Legends -->
+    <circle cx="60" cy="420" r="5" fill="#4f46e5"/>
+    <text x="74" y="424" font-family="Inter, sans-serif" font-size="12" fill="#475569">IoT Ingestion Rates (msg/sec)</text>
+
+    <circle cx="280" cy="420" r="5" fill="#10b981"/>
+    <text x="294" y="424" font-family="Inter, sans-serif" font-size="12" fill="#475569">Sensor Health Baseline</text>
+
+    <!-- Right Side: Recent Alerts & Microservice Status -->
+    <rect x="785" y="0" width="355" height="450" rx="12" fill="#ffffff" stroke="#e2e8f0" filter="url(#cityShadow)"/>
+    <text x="810" y="38" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Active System Alerts</text>
+
+    <!-- Alert 1 -->
+    <g transform="translate(810, 65)">
+      <rect width="305" height="85" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="16" y="26" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#991b1b">High PM10 Level - Zone 4</text>
+      <text x="16" y="48" font-family="Inter, sans-serif" font-size="11" fill="#7f1d1d">Industrial perimeter sensor exceeds threshold (88 ug/m3)</text>
+      <text x="16" y="70" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#b91c1c">ALERT DISPATCHED TO MUNICIPALITY &bull; 4m ago</text>
+    </g>
+
+    <!-- Alert 2 -->
+    <g transform="translate(810, 165)">
+      <rect width="305" height="85" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+      <text x="16" y="26" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#92400e">Street Luminaire Grid 12 Offline</text>
+      <text x="16" y="48" font-family="Inter, sans-serif" font-size="11" fill="#78350f">Automated switch relay timeout. Scheduled maintenance queued.</text>
+      <text x="16" y="70" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#d97706">WARNING &bull; 18m ago</text>
+    </g>
+
+    <!-- SonarQube Quality Gate badge in container -->
+    <g transform="translate(810, 270)">
+      <rect width="305" height="150" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">DXC SonarQube Quality Gate</text>
+      <text x="16" y="50" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Verified clean architecture compliance</text>
+
+      <rect x="16" y="65" width="60" height="26" rx="4" fill="#dcfce7"/>
+      <text x="46" y="82" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#15803d" text-anchor="middle">PASSED</text>
+      <text x="86" y="82" font-family="Inter, sans-serif" font-size="12" fill="#334155">0 Bugs &bull; 0 Vulnerabilities</text>
+
+      <text x="16" y="115" font-family="Inter, sans-serif" font-size="11" fill="#475569">Code Smells: Remediated (A Rating)</text>
+      <text x="16" y="132" font-family="Inter, sans-serif" font-size="11" fill="#475569">Coverage: Unit &amp; Integration verified in Docker</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <filter id="polShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="#f8fafc"/>
+
+  <!-- Top App Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#0f172a"/>
+  <rect x="30" y="18" width="60" height="28" rx="4" fill="#4f46e5"/>
+  <text x="60" y="37" font-family="Inter, sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">DXC</text>
+  <text x="105" y="38" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Smart City IoT Telemetry &bull; Air Quality &amp; Environmental Subsystem</text>
+
+  <!-- Sub navigation -->
+  <rect x="0" y="64" width="1200" height="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">LIVE OVERVIEW</text>
+  <text x="180" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">TRAFFIC FLOW DASHBOARD</text>
+  <text x="390" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">AIR POLLUTION &amp; PM2.5</text>
+  <line x1="390" y1="110" x2="570" y2="110" stroke="#4f46e5" stroke-width="3"/>
+  <text x="610" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">STREET LIGHTING GRIDS</text>
+
+  <g transform="translate(30, 130)">
+    <!-- Main Map View -->
+    <rect x="0" y="0" width="760" height="580" rx="12" fill="#ffffff" stroke="#e2e8f0" filter="url(#polShadow)"/>
+    <text x="28" y="38" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Urban Air Quality Heatmap &bull; PM2.5 / PM10 / NO2 Distribution</text>
+
+    <!-- Map representation -->
+    <rect x="30" y="70" width="700" height="470" rx="8" fill="#f1f5f9"/>
+
+    <!-- Zone circles -->
+    <circle cx="200" cy="220" r="110" fill="rgba(16, 185, 129, 0.25)" stroke="#10b981" stroke-width="2"/>
+    <circle cx="200" cy="220" r="28" fill="#10b981"/>
+    <text x="200" y="225" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Zone 1: 22 AQI</text>
+
+    <circle cx="500" cy="280" r="130" fill="rgba(245, 158, 11, 0.22)" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="500" cy="280" r="28" fill="#f59e0b"/>
+    <text x="500" y="285" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Zone 3: 54 AQI</text>
+
+    <circle cx="380" cy="420" r="90" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" stroke-width="2"/>
+    <circle cx="380" cy="420" r="28" fill="#ef4444"/>
+    <text x="380" y="425" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Zone 4: 88 AQI</text>
+
+    <!-- Side details -->
+    <rect x="785" y="0" width="355" height="580" rx="12" fill="#ffffff" stroke="#e2e8f0" filter="url(#polShadow)"/>
+    <text x="810" y="38" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Gas Sensor Dispersion Metrics</text>
+
+    <g transform="translate(810, 65)">
+      <rect width="305" height="85" rx="8" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#065f46">Particulate Matter (PM2.5)</text>
+      <text x="16" y="55" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#047857">14.2 &mu;g/m&sup3;</text>
+      <text x="16" y="74" font-family="Inter, sans-serif" font-size="11" fill="#065f46">WHO Standard compliant</text>
+    </g>
+
+    <g transform="translate(810, 165)">
+      <rect width="305" height="85" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#92400e">Nitrogen Dioxide (NO2)</text>
+      <text x="16" y="55" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#b45309">38.4 ppb</text>
+      <text x="16" y="74" font-family="Inter, sans-serif" font-size="11" fill="#92400e">Corridor traffic emission detected</text>
+    </g>
+
+    <g transform="translate(810, 265)">
+      <rect width="305" height="85" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Carbon Monoxide (CO)</text>
+      <text x="16" y="55" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#1e293b">0.8 ppm</text>
+      <text x="16" y="74" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Optimal ambient range</text>
+    </g>
+
+    <g transform="translate(810, 365)">
+      <rect width="305" height="180" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Backend Optimizations</text>
+      <text x="16" y="52" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; Automated aggregate rollup jobs</text>
+      <text x="16" y="76" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; Indexed geospatial coordinates in MySQL</text>
+      <text x="16" y="100" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; Spring Boot Cache eviction on sensor alert</text>
+      <text x="16" y="124" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; End-to-end latency reduced by 30%</text>
+      <text x="16" y="156" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4338ca">&bull; DXC Software Engineering Internship</text>
+    </g>
+  </g>
+</svg>

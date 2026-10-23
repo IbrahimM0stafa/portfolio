@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <filter id="trafShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="#f8fafc"/>
+
+  <!-- Top App Bar -->
+  <rect x="0" y="0" width="1200" height="64" fill="#0f172a"/>
+  <rect x="30" y="18" width="60" height="28" rx="4" fill="#4f46e5"/>
+  <text x="60" y="37" font-family="Inter, sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">DXC</text>
+  <text x="105" y="38" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#ffffff">Smart City IoT Telemetry &bull; Traffic Management Subsystem</text>
+
+  <!-- Sub navigation -->
+  <rect x="0" y="64" width="1200" height="48" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">LIVE OVERVIEW</text>
+  <text x="180" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">TRAFFIC FLOW DASHBOARD</text>
+  <line x1="180" y1="110" x2="350" y2="110" stroke="#4f46e5" stroke-width="3"/>
+  <text x="390" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">AIR POLLUTION &amp; PM2.5</text>
+  <text x="590" y="93" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#64748b">STREET LIGHTING GRIDS</text>
+
+  <!-- Content Grid -->
+  <g transform="translate(30, 130)">
+    <!-- Left Map / Junction Grid -->
+    <rect x="0" y="0" width="760" height="580" rx="12" fill="#ffffff" stroke="#e2e8f0" filter="url(#trafShadow)"/>
+    <text x="28" y="38" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Corridor Sensor Grid &amp; Signal Coordination</text>
+    
+    <!-- Schematic Roads -->
+    <rect x="50" y="180" width="660" height="60" fill="#f1f5f9" rx="4"/>
+    <line x1="50" y1="210" x2="710" y2="210" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="10,10"/>
+
+    <rect x="250" y="80" width="60" height="440" fill="#f1f5f9" rx="4"/>
+    <line x1="280" y1="80" x2="280" y2="520" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="10,10"/>
+
+    <rect x="520" y="80" width="60" height="440" fill="#f1f5f9" rx="4"/>
+    <line x1="550" y1="80" x2="550" y2="520" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="10,10"/>
+
+    <!-- Intersection 1 -->
+    <circle cx="280" cy="210" r="44" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="280" y="215" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#15803d" text-anchor="middle">Junction A</text>
+    <text x="280" y="235" font-family="Inter, sans-serif" font-size="10" fill="#166534" text-anchor="middle">Flow: Free (42 km/h)</text>
+
+    <!-- Intersection 2 -->
+    <circle cx="550" cy="210" r="44" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="550" y="215" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#b45309" text-anchor="middle">Junction B</text>
+    <text x="550" y="235" font-family="Inter, sans-serif" font-size="10" fill="#92400e" text-anchor="middle">Queue: 140m</text>
+
+    <!-- Signal Controller status -->
+    <rect x="50" y="460" width="320" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="66" y="488" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#0f172a">Adaptive Signal Algorithm</text>
+    <text x="66" y="508" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Dynamic green light allocation via vehicle volume</text>
+    <text x="66" y="528" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#4f46e5">Optimized latency cycle &bull; 90s round-trip</text>
+
+    <!-- Right Side Stats -->
+    <rect x="785" y="0" width="355" height="580" rx="12" fill="#ffffff" stroke="#e2e8f0" filter="url(#trafShadow)"/>
+    <text x="810" y="38" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#0f172a">Junction Telemetry Feed</text>
+
+    <g transform="translate(810, 65)">
+      <rect width="305" height="110" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Throughput Rate</text>
+      <text x="16" y="66" font-family="Inter, sans-serif" font-size="28" font-weight="800" fill="#4f46e5">3,840 vph</text>
+      <text x="16" y="92" font-family="Inter, sans-serif" font-size="12" fill="#059669">&#x25b2; 12% peak efficiency improvement</text>
+    </g>
+
+    <g transform="translate(810, 195)">
+      <rect width="305" height="110" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">MySQL Query Latency</text>
+      <text x="16" y="66" font-family="Inter, sans-serif" font-size="28" font-weight="800" fill="#059669">18 ms</text>
+      <text x="16" y="92" font-family="Inter, sans-serif" font-size="12" fill="#059669">Down from 62 ms after indexing</text>
+    </g>
+
+    <g transform="translate(810, 325)">
+      <rect width="305" height="220" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="16" y="28" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Deployment Architecture</text>
+      <text x="16" y="55" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; Angular 19 Dashboard UI</text>
+      <text x="16" y="80" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; Spring Boot 21 REST &amp; WebSockets</text>
+      <text x="16" y="105" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; Docker Compose &amp; Red Hat OpenShift</text>
+      <text x="16" y="130" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; JWT Security &amp; Role-based ACL</text>
+      <text x="16" y="155" font-family="Inter, sans-serif" font-size="12" fill="#475569">&bull; SonarQube Clean Code Verified</text>
+      <text x="16" y="195" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#15803d">&#x2714; Verified DXC Internship Deliverable</text>
+    </g>
+  </g>
+</svg>
